@@ -1,0 +1,113 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import square, sawtooth
+from time import sleep
+import sounddevice as sd
+import wave
+import struct
+# # Zadanie 1
+# # a)
+# x = np.zeros((1, 41))
+# x[0][0] = 1
+# x[0][40] = 1
+# plt.stem(x[0])
+# plt.xlabel('Numer probki')
+# plt.ylabel('Wartosc probki')
+# plt.title('Impuls oraz impuls przesuniety o N=40 probek')
+# plt.axis((-1, 41, -0.05, 1.05))
+# plt.grid(True)
+# plt.show()
+#
+#
+# # b)
+# N = 200
+# x = np.linspace(0, 2*5*np.pi, N)
+# Y = [np.sin(x), sawtooth(x), square(x)]
+#
+# for i in range(0, 3):
+#     plt.subplot(3, 1, i+1)
+#     plt.plot(x, Y[i])
+#     plt.xlabel('Kat [rad]')
+#     plt.ylabel('Amplituda')
+# plt.tight_layout()
+# plt.show()
+#
+#
+#c)
+# n = 200
+# y = np.random.normal(loc=0, scale=0.5, size=n)
+# plt.plot(y)
+# plt.xlabel("Numer probki")
+# plt.ylabel('Wartosc chwilowa')
+# plt.title(f'Szum Gaussowski, μ={round(np.mean(y), 4)}, σ^2={round(np.std(y), 4)}')
+# plt.show()
+
+#zadanie 2
+# A = [1,2,5]
+# F = [1000,2000,5000]
+# phi = [0,-np.pi/2,np.pi/2]
+# fs = 44100
+# dur = 3
+# t = np.arange(start=0,stop=dur,step=1/fs)
+# n = np.arange(0,len(t))
+
+# m = 1
+# for i in range(0,3):
+#     y = A[i]*np.sin(2*np.pi*F[0]*n/fs + phi[0])
+#     plt.subplot(3,1,m)
+#     plt.xticks([0.0000, 0.0005, 0.0010, 0.0015, 0.0020, 0.0025, 0.0030], ["0", "0.5", "1", "1.5", "2", "2.5", "3"])
+#     plt.axis((0,0.003,-5,5))
+#     plt.plot(t,y)
+#     plt.xlabel("Czas[s]")
+#     plt.ylabel("Amplituda")
+#     plt.title(f"Amplituda = {A[i]}")
+#     plt.text(0.0028, -11.5, r'$x 10^{-3}$', fontsize=10)
+#     plt.tight_layout()
+#     m+=1
+#     sd.play(y, fs)
+#     sd.wait()
+# plt.tight_layout()
+# plt.show()
+
+# m = 1
+# for i in range(0,3):
+#     y = A[2]*np.sin(2*np.pi*F[i]*n/fs + phi[0])
+#     plt.subplot(3,1,m)
+#     plt.xticks([0.0000, 0.0005, 0.0010, 0.0015, 0.0020, 0.0025, 0.0030], ["0", "0.5", "1", "1.5", "2", "2.5", "3"])
+#     plt.axis((0,0.003,-5,5))
+#     plt.plot(t,y)
+#     plt.xlabel("Czas[s]")
+#     plt.ylabel("Amplituda")
+#     plt.title(f"f = {F[i]} Hz")
+#     plt.text(0.003, -10.5, r'$x 10^{-3}$', fontsize=10)
+#     m+=1
+#     sd.play(y, fs)
+#     sd.wait()
+# plt.tight_layout()
+# plt.show()
+
+#
+# m = 1
+# for i in range(0,3):
+#     y = A[2]*np.sin(2*np.pi*F[0]*n/fs + phi[i])
+#     plt.subplot(3,1,m)
+#     plt.xticks([0.0000, 0.0005, 0.0010, 0.0015, 0.0020, 0.0025, 0.0030], ["0", "0.5", "1", "1.5", "2", "2.5", "3"])
+#     plt.axis((0,0.003,-5,5))
+#     plt.plot(t,y)
+#     plt.xlabel("Czas[s]")
+#     plt.ylabel("Amplituda")
+#     plt.title(f"phi = {round(phi[i],2)} rad")
+#     plt.text(0.00165, -11, r'$x 10^{-3}$', fontsize=10)
+#     m+=1
+#     sd.play(y, fs)
+#     sd.wait()
+# plt.tight_layout()
+# plt.show()
+
+
+
+
+
+
+
+
