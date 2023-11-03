@@ -34,7 +34,7 @@ import struct
 #
 #
 #c)
-# n = 200
+# n = 400
 # y = np.random.normal(loc=0, scale=0.5, size=n)
 # plt.plot(y)
 # plt.xlabel("Numer probki")
@@ -104,10 +104,82 @@ import struct
 # plt.tight_layout()
 # plt.show()
 
+#zadanie 3
+# A = 1
+# f = 1000
+# dur = 0.007
+# fs = [8000,2000,1100]
+#
+# m = 1
+# for i in range(0,3):
+#     t = np.arange(start=0, stop=dur+1/fs[i], step=1 / fs[i])
+#     n = np.arange(start = 0, stop=len(t))
+#     y = A*np.sin(2*np.pi*f*n/fs[i])
+#     plt.subplot(3,1,m)
+#     plt.plot(t,y)
+#     plt.stem(t,y)
+#     plt.axis((0, 0.007, -1, 1))
+#     plt.xlabel("Czas [ms]")
+#     plt.ylabel("Amplituda")
+#     plt.title(f"fs = {fs[i]}Hz, f = 1000Hz")
+#     plt.grid(True)
+#     m+=1
+#     sd.play(y,fs[i])
+#     sd.wait()
+# plt.tight_layout()
+# plt.show()
 
+#zadanie 4
+obj = wave.open("123.wav","rb")
+sample_freq = obj.getframerate()
+n_samples = obj.getnframes()
+signal_wave = obj.readframes(-1) #byte object
 
+obj.close()
 
+length_signal = n_samples/sample_freq
+print(length_signal)
+signal_array = np.frombuffer(signal_wave,dtype=np.int16)
 
+times = np.linspace(0,length_signal,num=n_samples)
 
+plt.figure(figsize=(8,6))
+plt.subplot(4,1,1)
+plt.plot(times,signal_array)
+plt.title("Mowa")
+plt.xlabel("Czas [s]")
+plt.ylabel("Amplituda")
+plt.xlim(0,length_signal)
+plt.ylim(-5000,5000)
+#sd.play(signal_array,sample_freq)
+#sd.wait()
 
+reversed_array = signal_array[::-1]
+plt.subplot(4,1,2)
+plt.plot(times,reversed_array)
+plt.title("Mowa odwrocona")
+plt.xlabel("Czas [s]")
+plt.ylabel("Amplituda")
+plt.ylim(-5000,5000)
+sd.play(reversed_array,sample_freq)
+sd.wait()
 
+y = np.random.normal(loc=0, scale=600, size=n_samples)
+plt.subplot(4,1,3)
+plt.plot(times,y)
+plt.xlabel("Numer probki")
+plt.ylabel('Wartosc chwilowa')
+plt.title(f'Szum Gaussowski, μ={round(np.mean(y), 4)}, σ^2={round(np.std(y), 4)}')
+plt.ylim(-5000,5000)
+plt.xlim(0,length_signal)
+
+superposed_signal = signal_array + y
+plt.subplot(4, 1, 4)
+plt.plot(times, superposed_signal)
+plt.title("Superpozycja")
+plt.xlabel("Czas [s]")
+plt.ylabel("Amplituda")
+plt.xlim(0, length_signal)
+
+plt.tight_layout()
+plt.show()
