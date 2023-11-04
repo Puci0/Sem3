@@ -4,6 +4,7 @@ from scipy.signal import square, sawtooth
 from time import sleep
 import sounddevice as sd
 import wave
+from scipy.io import wavfile
 import struct
 # # Zadanie 1
 # # a)
@@ -130,56 +131,98 @@ import struct
 # plt.show()
 
 #zadanie 4
-obj = wave.open("123.wav","rb")
-sample_freq = obj.getframerate()
-n_samples = obj.getnframes()
-signal_wave = obj.readframes(-1) #byte object
+# obj = wave.open("123.wav","rb")
+# sample_freq = obj.getframerate()
+# n_samples = obj.getnframes()
+# signal_wave = obj.readframes(-1) #byte object
+#
+# obj.close()
+#
+# length_signal = n_samples/sample_freq
+# print(length_signal)
+# signal_array = np.frombuffer(signal_wave,dtype=np.int16)
+#
+# times = np.linspace(0,length_signal,num=n_samples)
+#
+# plt.figure(figsize=(8,6))
+# plt.subplot(4,1,1)
+# plt.plot(times,signal_array)
+# plt.title("Mowa")
+# plt.xlabel("Czas [s]")
+# plt.ylabel("Amplituda")
+# plt.xlim(0,length_signal)
+# plt.ylim(-5000,5000)
+# #sd.play(signal_array,sample_freq)
+# #sd.wait()
+#
+# reversed_array = signal_array[::-1]
+# plt.subplot(4,1,2)
+# plt.plot(times,reversed_array)
+# plt.title("Mowa odwrocona")
+# plt.xlabel("Czas [s]")
+# plt.ylabel("Amplituda")
+# plt.ylim(-5000,5000)
+# sd.play(reversed_array,sample_freq)
+# sd.wait()
+#
+# y = np.random.normal(loc=0, scale=600, size=n_samples)
+# plt.subplot(4,1,3)
+# plt.plot(times,y)
+# plt.xlabel("Numer probki")
+# plt.ylabel('Wartosc chwilowa')
+# plt.title(f'Szum Gaussowski, μ={round(np.mean(y), 4)}, σ^2={round(np.std(y), 4)}')
+# plt.ylim(-5000,5000)
+# plt.xlim(0,length_signal)
+#
+# superposed_signal = signal_array + y
+# plt.subplot(4, 1, 4)
+# plt.plot(times, superposed_signal)
+# plt.title("Superpozycja")
+# plt.xlabel("Czas [s]")
+# plt.ylabel("Amplituda")
+# plt.xlim(0, length_signal)
+#
+# plt.tight_layout()
+# plt.show()
 
-obj.close()
+#zadanie 5
+sample_rate = 44100
+CZESTOTLIWOSC = {
+    'C': 261.626,
+    'D': 293.665,
+    'E': 329.628,
+    'F': 349.228,
+    'G': 391.995,
+    'A': 440,
+    'H': 493.883,
+}
 
-length_signal = n_samples/sample_freq
-print(length_signal)
-signal_array = np.frombuffer(signal_wave,dtype=np.int16)
+MELODIA = [
+    ('G', 0.75), ('E', 0.75), ('E', 0.75), ('F', 0.75), ('D', 0.75), ('D', 0.75),
+    ('C', 0.35), ('E', 0.35), ('G', 1.5),
+    ('G', 0.75), ('E', 0.75), ('E', 0.75), ('F', 0.75), ('D', 0.75), ('D', 0.75),
+    ('C', 0.35), ('E', 0.35), ('C', 1.5),
+    ('C', 0.75), ('E', 0.75), ('E', 0.75), ('F', 0.75), ('D', 0.75), ('D', 0.75),
+    ('C', 0.35), ('E', 0.35), ('G', 1.5),
+    ('G', 0.75), ('E', 0.75), ('E', 0.75), ('F', 0.75), ('D', 0.75), ('D', 0.75),
+    ('C', 0.35), ('E', 0.35), ('C', 1.5)
+]
 
-times = np.linspace(0,length_signal,num=n_samples)
+def generuj_dzwiek(length,freq,fade_in=0.1, fade_out=0.1):
+    t = np.arange(0,length,1/sample_rate)
+    nuta = np.sin(2*np.pi*freq*t)
+    nuta[:int(fade_in * sample_rate)] *= np.linspace(0, 1, int(fade_in * sample_rate))
+    nuta[-int(fade_out * sample_rate):] *= np.linspace(1, 0, int(fade_out * sample_rate))
+    nuta *= 32767
+    nuta = np.int16(nuta)
+    return nuta
 
-plt.figure(figsize=(8,6))
-plt.subplot(4,1,1)
-plt.plot(times,signal_array)
-plt.title("Mowa")
-plt.xlabel("Czas [s]")
-plt.ylabel("Amplituda")
-plt.xlim(0,length_signal)
-plt.ylim(-5000,5000)
-#sd.play(signal_array,sample_freq)
-#sd.wait()
+combined_signal = np.array([], dtype=np.int16)
 
-reversed_array = signal_array[::-1]
-plt.subplot(4,1,2)
-plt.plot(times,reversed_array)
-plt.title("Mowa odwrocona")
-plt.xlabel("Czas [s]")
-plt.ylabel("Amplituda")
-plt.ylim(-5000,5000)
-sd.play(reversed_array,sample_freq)
-sd.wait()
+for i in range(1,len(MELODIA)):
+    nuta, dlugosc = MELODIA[i]
+    czestotliwosc = CZESTOTLIWOSC[nuta]
+    sygnal = generuj_dzwiek(dlugosc,czestotliwosc)
+    combined_signal = np.append(combined_signal,sygnal)
 
-y = np.random.normal(loc=0, scale=600, size=n_samples)
-plt.subplot(4,1,3)
-plt.plot(times,y)
-plt.xlabel("Numer probki")
-plt.ylabel('Wartosc chwilowa')
-plt.title(f'Szum Gaussowski, μ={round(np.mean(y), 4)}, σ^2={round(np.std(y), 4)}')
-plt.ylim(-5000,5000)
-plt.xlim(0,length_signal)
-
-superposed_signal = signal_array + y
-plt.subplot(4, 1, 4)
-plt.plot(times, superposed_signal)
-plt.title("Superpozycja")
-plt.xlabel("Czas [s]")
-plt.ylabel("Amplituda")
-plt.xlim(0, length_signal)
-
-plt.tight_layout()
-plt.show()
+wavfile.write("file.wav",sample_rate,combined_signal)
