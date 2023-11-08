@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-
     ifstream plik("C:\\Users\\user\\CLionProjects\\ASD\\In0104.txt");
     ofstream output("C:\\Users\\user\\CLionProjects\\ASD\\Out0104.txt");
     int szerokosc_korytarza, ilosc_pretow;
@@ -83,6 +82,7 @@ int main()
     if(niebezpieczne_pasma[niebezpieczne_pasma.size()-1] != 11)
     {
         output << "(" << niebezpieczne_pasma[niebezpieczne_pasma.size()-1] << "," << szerokosc_korytarza << ")" << endl;
+        licznik++;
     }
     output << licznik;
 }

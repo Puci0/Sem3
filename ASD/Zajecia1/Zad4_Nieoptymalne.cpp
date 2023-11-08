@@ -1,89 +1,107 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
+
 using namespace std;
 
-void sortowaniePar(int Tab[], int n) {
-    for (int i = 0; i < n; i += 2) {
-        for (int j = i + 2; j < n; j += 2) {
-            if (Tab[i] > Tab[j]) {
-                int temp1 = Tab[i];
-                Tab[i] = Tab[j];
-                Tab[j] = temp1;
+int main()
+{
 
-                int temp2 = Tab[i + 1];
-                Tab[i + 1] = Tab[j + 1];
-                Tab[j + 1] = temp2;
+    ifstream plik("C:\\Users\\user\\CLionProjects\\ASD\\In0104.txt");
+    ofstream output("C:\\Users\\user\\CLionProjects\\ASD\\Out0104.txt");
+    int szerokosc_korytarza, ilosc_pretow;
+    plik >> szerokosc_korytarza >> ilosc_pretow;
+    int *y_coords = new int[szerokosc_korytarza+1] {};
+    for (int i = 0; i < szerokosc_korytarza + 1; i++) {
+        y_coords[i] = 0;
+    }
+    for (int i = 0; i < ilosc_pretow; i++) {
+        int x1, y1, x2, y2;
+        plik >> x1 >> y1 >> x2 >> y2;
+        if(y2 > y_coords[y1])
+        {
+            y_coords[y1] = y2;
+        }
+    }
+    plik.close();
+
+    int poczatek_preta = -1;
+    int koniec_preta = -1;
+    vector<int> niebezpieczne_pasma;
+    for(int i = 0;i <= szerokosc_korytarza; i ++)
+    {
+        if(y_coords[i] != 0)
+        {
+            // czy nowy pret jest dluzszy od tego ktory sie juz zaczal
+            if(poczatek_preta != -1 && y_coords[i]>koniec_preta && koniec_preta != -1)
+            {
+                koniec_preta = y_coords[i];
+            }
+
+            if(poczatek_preta == -1)
+            {
+                if(i == y_coords[i])
+                {
+                    niebezpieczne_pasma.push_back(i);
+                    niebezpieczne_pasma.push_back(i);
+                }
+                else
+                {
+                    poczatek_preta = i;
+                    koniec_preta = y_coords[i];
+                    niebezpieczne_pasma.push_back(poczatek_preta);
+                }
             }
         }
-    }
-}
-
-int main() {
-    ifstream plik("C:\\Users\\User\\CLionProjects\\Algorytmy1\\In0104.txt");
-    ofstream output("C:\\Users\\User\\CLionProjects\\Algorytmy1\\Out0104.txt");
-    int n,m;
-    plik>>n>>m;
-    int rozmiar = m*4+2;
-    int *tab = new int[rozmiar]; // int tab[rozmiar]
-    int i=0;
-    while(plik>>tab[i])
-    {
-        //cout << tab[i] << " ";
-        i++;
+        // sprawdzamy czy pret sie konczy nie wazne czy zaczyna sie nowy czy nie
+        if(poczatek_preta != -1 && i == koniec_preta)
+        {
+            niebezpieczne_pasma.push_back(koniec_preta);
+            poczatek_preta = -1;
+            koniec_preta = -1;
+        }
     }
 
-    int tablica_y[m*2];
+//    for(int i =0;i<niebezpieczne_pasma.size();i++)
+//    {
+//        cout << niebezpieczne_pasma[i] << " ";
+//    }
+
+// bezpieczne pasma
     int licznik = 0;
-    int szerokosc_korytarza = n;
-    int ilosc_wspolrzednych = m*2;
-    //cout << "Tablica y: ";
-    for (int i = 1; i < rozmiar; i += 2) {
-        tablica_y[licznik] = tab[i];
-        //cout << tablica_y[licznik] << " ";
+    if(niebezpieczne_pasma[0] != 0)
+    {
+        output << "(0," << niebezpieczne_pasma[0] << ")" << endl;
         licznik++;
     }
-
-    sortowaniePar(tablica_y, ilosc_wspolrzednych);
-
-    //cout << endl << "Posortowana tablica: ";
-    //for (int i = 0; i < ilosc_wspolrzednych; i++) {
-    //cout << tablica_y[i] << " ";
-    //}
-
-    //algorytm
-
-    int iloscPasm = 0;
-    int poprzedniaPozycja = 0;
-    const int maxLiczbaPasm = szerokosc_korytarza * 2;
-    int bezpiecznePasma[maxLiczbaPasm];
-
-    for (int i = 0; i < ilosc_wspolrzednych; i += 2) {
-        int y1 = tablica_y[i];
-        int y2 = tablica_y[i + 1];
-
-        if (y1 > poprzedniaPozycja) {
-            // Dodaj bezpieczne pasmo
-            bezpiecznePasma[iloscPasm] = poprzedniaPozycja;
-            iloscPasm++;
-            bezpiecznePasma[iloscPasm] = y1;
-            iloscPasm++;
-        }
-
-        poprzedniaPozycja = y2;
+    for(int i = 2;i < niebezpieczne_pasma.size(); i+=2)
+    {
+        //cout << niebezpieczne_pasma[i-1] << " " << niebezpieczne_pasma[i] << " ";
+        output << "(" << niebezpieczne_pasma[i-1] << "," << niebezpieczne_pasma[i] << ")" << endl;
+        licznik++;
     }
-
-    if (poprzedniaPozycja < szerokosc_korytarza) {
-        bezpiecznePasma[iloscPasm] = poprzedniaPozycja;
-        iloscPasm++;
-        bezpiecznePasma[iloscPasm] = szerokosc_korytarza;
-        iloscPasm++;
+    if(niebezpieczne_pasma[niebezpieczne_pasma.size()-1] != 11)
+    {
+        output << "(" << niebezpieczne_pasma[niebezpieczne_pasma.size()-1] << "," << szerokosc_korytarza << ")" << endl;
+        licznik++;
     }
-
-    // wyniki
-    //cout << endl;
-    for (int i = 0; i < iloscPasm; i += 2) {
-        output << "(" << bezpiecznePasma[i] << ", " << bezpiecznePasma[i + 1] << ")\n";
-    }
-
-    output << iloscPasm / 2;
+    output << licznik;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
