@@ -30,26 +30,6 @@ void insert(struct Drzewo **korzen, int wartosc)
     }
 }
 
-int znajdz(struct Drzewo *korzen, int wartosc)
-{
-    if(korzen==NULL)
-    {
-        return 0;
-    }
-    if(korzen->liczba == wartosc)
-    {
-        return korzen->liczba;
-    }
-    if(wartosc < korzen->liczba)
-    {
-        return znajdz(korzen->L, wartosc);
-    }
-    else
-    {
-        return znajdz(korzen->P, wartosc);
-    }
-}
-
 ofstream output("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\Out0207.txt");
 void KLP(struct Drzewo *korzen)
 {
