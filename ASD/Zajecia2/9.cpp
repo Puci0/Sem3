@@ -24,8 +24,8 @@ bool wyszukiwanie_binarne(int l,int p, int szukana_liczba, int tab[])
 
 int main()
 {
-    ifstream input("C:\\Users\\user\\CLionProjects\\ASD_2\\In0209.txt");
-    ofstream output("C:\\Users\\user\\CLionProjects\\ASD_2\\Out0209.txt");
+    ifstream input("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\In0209.txt");
+    ofstream output("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\Out0209.txt");
 
     int n;
     input >> n;
@@ -43,13 +43,15 @@ int main()
     }
 
     // algorytm
-    int szukana;
+    int szukana,licznik=0;
     for(int i=0; i<n; i++)
     {
         szukana = tab_nieposortowana[i];
         if(wyszukiwanie_binarne(0,n-1,szukana,tab_posortowana) == true)
         {
             output << szukana << " ";
+            licznik++;
         }
     }
+    output << endl << licznik;
 }

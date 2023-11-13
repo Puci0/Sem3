@@ -20,9 +20,10 @@ int fib(int n) {
 
 int main()
 {
-    ifstream input("C:\\Users\\user\\CLionProjects\\ASD_2\\In0203.txt");
-    ofstream output("C:\\Users\\user\\CLionProjects\\ASD_2\\Out0203.txt");
-    int n = 400;
+    ifstream input("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\In0203.txt");
+    ofstream output("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\Out0203.txt");
+    int n;
+    input >> n;
     int i = 0;
     while(fib(i) < n)
     {

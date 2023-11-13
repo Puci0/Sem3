@@ -50,7 +50,7 @@ int znajdz(struct Drzewo *korzen, int wartosc)
     }
 }
 
-ofstream output("C:\\Users\\user\\CLionProjects\\ASD_2\\Out0207.txt");
+ofstream output("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\Out0207.txt");
 void KLP(struct Drzewo *korzen)
 {
     if(korzen != NULL)
@@ -64,7 +64,7 @@ void KLP(struct Drzewo *korzen)
 
 int main()
 {
-    ifstream input("C:\\Users\\user\\CLionProjects\\ASD_2\\In0207.txt");
+    ifstream input("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\In0207.txt");
     struct Drzewo *korzen = NULL;
     int wartosc;
     while(input >> wartosc)
