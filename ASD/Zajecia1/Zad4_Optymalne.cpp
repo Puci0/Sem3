@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-    ifstream plik("C:\\Users\\user\\CLionProjects\\ASD\\In0104.txt");
-    ofstream output("C:\\Users\\user\\CLionProjects\\ASD\\Out0104.txt");
+    ifstream plik("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia1\\In0104.txt");
+    ofstream output("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia1\\Out0104.txt");
     int szerokosc_korytarza, ilosc_pretow;
     plik >> szerokosc_korytarza >> ilosc_pretow;
     int *y_coords = new int[szerokosc_korytarza+1] {};
