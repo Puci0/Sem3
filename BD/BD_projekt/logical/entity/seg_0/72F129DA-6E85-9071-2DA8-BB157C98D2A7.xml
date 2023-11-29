@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="72F129DA-6E85-9071-2DA8-BB157C98D2A7" name="Wydarzenia">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:59:25 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Wydarzenia" id="5BD1F6B2-905B-A5A6-789D-32FEA8D150BD">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:59:32 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Wykonawcy" id="A387B8FF-7A65-F8A2-DE80-84588DD52C04">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:59:46 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_wydarzenia" id="59231A89-31FC-E41C-69AB-54D4354780B8">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:00:02 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Miejsce_wydarzenia" id="FF1744FB-5B92-EA2F-0949-77DED6D96D3B">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:00:32 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5C03529B-B08C-1D6C-8ECF-335521164E70" name="Wydarzenia PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:59:44 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5BD1F6B2-905B-A5A6-789D-32FEA8D150BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

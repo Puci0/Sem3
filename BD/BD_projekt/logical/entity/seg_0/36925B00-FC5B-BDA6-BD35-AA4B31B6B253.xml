@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="36925B00-FC5B-BDA6-BD35-AA4B31B6B253" name="Historia_wyszukiwania">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:39:25 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Tekst" id="FF88D118-010E-3B8C-3C24-8C578D5241D8">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:39:52 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Uzytkownika" id="8C34DCB0-7E48-0C83-7C5A-31DF403372C0">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:40:19 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

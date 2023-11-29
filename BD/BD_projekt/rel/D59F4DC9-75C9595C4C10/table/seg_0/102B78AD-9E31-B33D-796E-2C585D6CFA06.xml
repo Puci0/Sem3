@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="102B78AD-9E31-B33D-796E-2C585D6CFA06" name="Znajomi">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>DAF2B6D5-B81A-9B1C-BB70-7DC2F9714B76</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Użytkownika" id="DF7C3B6A-9215-E259-4DB5-A6F35D13D063">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>7409DC6F-8A37-DC5C-9204-736FBEE996E0</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDA93F14-B3E7-A977-3E04-728E4A6B2F1D" referredColumn="DD614932-932B-F3A9-5696-2B3B111D6D1E"/>
+</associations>
+</Column>
+<Column name="ID_Znajomego" id="2E07770C-B46D-0BAC-BB69-927FCD220587">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>910F9BED-589B-7F43-7D7F-C81AA2BC6AEB</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1A215D22-D3FE-36CD-50FC-61D6AE4346B4" referredColumn="DD614932-932B-F3A9-5696-2B3B111D6D1E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0B4DE119-5771-1B26-F447-2972472511A7" name="Znajomi_Uzytkownicy_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:06:02 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF7C3B6A-9215-E259-4DB5-A6F35D13D063"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8ED3ED97-7F74-4E41-8881-51FEF0BEAD80" name="Znajomi_Uzytkownicy_FKv1">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:09:44 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E07770C-B46D-0BAC-BB69-927FCD220587"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

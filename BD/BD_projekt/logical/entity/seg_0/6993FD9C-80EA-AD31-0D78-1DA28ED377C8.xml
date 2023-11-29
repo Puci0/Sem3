@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6993FD9C-80EA-AD31-0D78-1DA28ED377C8" name="Zgłoszenia">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:19:38 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Zgłoszenia" id="AD391AA6-D8EB-F9C1-AF31-5935B79C1731">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:20:41 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Uzytkownika" id="C76971BB-FD99-210D-547D-F641F2FBB455">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:21:11 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Treść_zgłoszenia" id="21CBBF45-E32A-2A97-67F8-0B23B9D1F6A4">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:21:41 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status_zgłoszenia" id="6C48308F-F097-B7D6-0BB9-6F85FC707CD4">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:22:11 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6A5AB4AB-3E87-A021-3AB4-F4D18751F92F" name="Zgłoszenia PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:21:09 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AD391AA6-D8EB-F9C1-AF31-5935B79C1731</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

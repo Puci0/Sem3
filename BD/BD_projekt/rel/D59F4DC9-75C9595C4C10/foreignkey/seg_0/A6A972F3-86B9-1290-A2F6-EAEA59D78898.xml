@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A6A972F3-86B9-1290-A2F6-EAEA59D78898" containerWithKeyObject="8F7D958F-A05E-5BFC-05C3-63CB8AA3E038" localFKIndex="3532CF94-47B9-745B-5B01-23172296D893" name="Subskrypcje_uzytkownikow_Subskrypcje_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:04:02 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<referredTableLongName>Subskrypcje</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CA5DE911-6A96-1F48-8493-5E77B3DB4588</referredTableID>
+<keyObject>CB6B7599-D023-BE0F-59E2-A806E7195535</keyObject>
+<referredKeyID>CB6B7599-D023-BE0F-59E2-A806E7195535</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Subskrypcji</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A93BC28E-5E09-31A5-786D-C39989C15968" containerWithKeyObject="392F12CD-4C4D-5B2D-FEAF-38450CE107F3" localFKIndex="9FE145A4-923C-3A0C-2026-7FC328D57085" name="Preferencje_uzytkownikow_Gatunki_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:10:11 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<referredTableLongName>Gatunki</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5D7D8427-AE98-C2E0-C9E8-860F767CE0D2</referredTableID>
+<keyObject>1DFDDDB9-13BC-C198-BC4B-D0D4588ED76C</keyObject>
+<referredKeyID>1DFDDDB9-13BC-C198-BC4B-D0D4588ED76C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Gatunku</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

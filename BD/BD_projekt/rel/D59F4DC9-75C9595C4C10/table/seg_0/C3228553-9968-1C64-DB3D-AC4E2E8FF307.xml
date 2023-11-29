@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3228553-9968-1C64-DB3D-AC4E2E8FF307" name="Utwory">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>7879F472-2A7D-754C-2CBF-F935E59F060A</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Utworu" id="B92971EE-E27E-0266-3322-58862EF8A11E">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>295176CF-378C-D5D2-A321-D4B8A133F89A</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Wykonawcy" id="6FCC7CC6-4657-CA9D-FC8B-2E1AFDF47D7C">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>05BAD3C1-FB73-FA89-B32C-D603B2C8F591</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD673751-3D59-483B-DC69-601DDD86D769" referredColumn="7D319CC9-9C12-8BDD-ECCB-F096D76CE1E1"/>
+</associations>
+</Column>
+<Column name="ID_Albumu" id="31822E9D-803D-4108-2247-7D71ABCC107B">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>687FE50D-1E4F-39D2-DC04-ADDA2E4384FA</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6756F896-9B1B-3D88-5CA7-2ADA2A2A6859" referredColumn="FD713882-1A35-FD06-9736-270E36685865"/>
+</associations>
+</Column>
+<Column name="Tytuł_utworu" id="6A78693D-03CD-239F-438D-5EAF286FED69">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>D3D68E49-4D94-C705-F4E0-0D13CCD942DE</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_wydania" id="03B3B625-3D1E-7E8D-A976-5156C3688D8B">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>4F401ACA-342B-D5C8-3786-C7776BFB8F9A</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Czas_trwania" id="C6A70FD0-C20A-7585-A613-738198F7FBF0">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>7DAF9100-0B26-BE3A-8A0E-47C9674006AC</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D89BE073-1DA2-1C13-8A6C-1F62CB67437C" name="Utwory_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>03FDA4B6-360E-1B61-8F20-0B642A17D487</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B92971EE-E27E-0266-3322-58862EF8A11E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="625645F3-0D18-8799-6D5E-D8A1E9410BA9" name="Utwory_Wykonawcy_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 09:36:03 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6FCC7CC6-4657-CA9D-FC8B-2E1AFDF47D7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5C8F52A-42E8-6016-40FF-8FD54527830D" name="Utwory_Albumy_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 09:41:31 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31822E9D-803D-4108-2247-7D71ABCC107B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

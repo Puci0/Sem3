@@ -1,0 +1,22 @@
+wykonawcy 1 .
+utwory 2 .
+playlisty 3 
+utwory_w_playlistach 
+albumy 4
+uzytkownicy 5 .
+oceny 7 
+tabela_gatunkow 8 
+gatunki .
+znajomi 9
+historia_odtwarzania 10
+teksty_utworów 11
+statystyki_utworow 12
+wspolpracownicy 13
+preferencje_uzytkownikow 15
+statystyki_uzytkownikow 16
+wydarzenia_muzyczne 17
+subskrypcje 18
+nowości 19
+podcasty 20
+
+

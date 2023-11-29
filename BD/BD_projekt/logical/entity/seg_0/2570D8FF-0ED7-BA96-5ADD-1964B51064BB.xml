@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2570D8FF-0ED7-BA96-5ADD-1964B51064BB" name="Utwory_w_playlistach">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:04:15 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Playlisty" id="E78E0BB0-69CC-5E28-C01E-DEC2926D0339">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:06:01 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Utworu" id="2C127BDF-F60F-2AF5-034C-BDC02DCF2194">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 17:06:26 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA5DE911-6A96-1F48-8493-5E77B3DB4588" name="Subskrypcje">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>4EFBC3A6-86AA-37B0-9883-C4B8C5FE8C67</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Subskrypcji" id="4874CDE9-6E51-CA6A-426A-D718341AC3C4">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>53677C10-295E-DCD9-2A5B-1C32A1679A04</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nazwa" id="39CFE36B-1DE2-9134-E044-1024D8B7D528">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>A7B6EDC2-6D29-B546-D717-CAB46BE1E2DE</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cena" id="706BD61A-B98B-B017-E4C6-5D959E4E11D8">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>EBA51EF4-5FB0-9C6E-3C0A-EAF8473D85F4</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB6B7599-D023-BE0F-59E2-A806E7195535" name="Subskrypcje_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>409A615D-0092-C82E-4B6B-FAC56AF95AD7</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4874CDE9-6E51-CA6A-426A-D718341AC3C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

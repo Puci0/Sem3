@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7B489B1-CAD4-0997-05C5-85F3A2193882" name="Podcasty">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>591FC2E6-76E0-5F50-9545-A0EFB87E9972</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Podcastu" id="BDBB574A-B28A-6E02-89AE-B95BC2761AC8">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>0C57A7CE-173B-3574-DA36-C4741C61A2CA</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Wykonawcy" id="FEF4B2CD-38CB-A6F3-8D41-A988BC015534">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>21BB03C1-9AE0-2874-D8D4-A02DF56E2B62</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="318EEB32-4043-A7E0-96E5-FE654C72C494" referredColumn="7D319CC9-9C12-8BDD-ECCB-F096D76CE1E1"/>
+</associations>
+</Column>
+<Column name="Data_wydania" id="85DF8BFB-9784-AD46-C660-5826B08C1310">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>D7CE26B8-CC37-BF41-122E-DB0AE2F92B47</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Czas" id="5DABD615-69A7-EE91-4F5C-F9D6DBC20225">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>319FCCEA-DED8-20F5-599C-EE7AF743ED85</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nazwa" id="9C12F05C-3131-4C8E-A151-215180ED5443">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>DCE47088-1276-65C9-5086-40897E08C5D2</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A8F356D2-FCE1-17FB-FBE0-22D75C9C9077" name="Podcasty_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>B6BE690E-B327-6B0A-FCE5-FD1ED91BBFC0</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BDBB574A-B28A-6E02-89AE-B95BC2761AC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2FFF023A-BD89-20DA-6820-935F50470573" name="Podcasty_Wykonawcy_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:03:00 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEF4B2CD-38CB-A6F3-8D41-A988BC015534"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5855C954-CD82-84B4-4127-47A86DC249A8" name="Oceny_utworów">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>A38114C9-F274-DE73-59C5-C4E6A48D5F04</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<ordsAlias>oceny_utworow</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Oceny" id="37037A7A-39F4-02F8-BE47-36D6FC61861F">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>3825F03E-1B75-288A-BC6E-B0CDA4713BA1</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Utworu" id="CA14CF4A-95F1-1B30-89B9-B8394C159B9F">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>51FAE93A-C7F7-E898-9603-A872B5F24595</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C83365E7-51CD-EAED-E746-3D62F2B79B15" referredColumn="B92971EE-E27E-0266-3322-58862EF8A11E"/>
+</associations>
+</Column>
+<Column name="Ocena" id="C727129F-F111-45B9-1BEB-AA14CCD75365">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>5F9F5334-989F-E8E5-4FD8-1DFB715C8DCD</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E7F1ACFA-FA84-0AC8-3785-23E3561E6389" name="Oceny_utworów_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>97DCC388-63D1-870A-D805-E530ACE64E8C</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37037A7A-39F4-02F8-BE47-36D6FC61861F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8259589F-CC6D-DFB2-3DB5-08C1D9612337" name="Oceny_utworów_Utwory_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 09:55:46 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA14CF4A-95F1-1B30-89B9-B8394C159B9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

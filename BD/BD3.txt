@@ -1,0 +1,5 @@
+select min(comm),max(comm) FROM emp,dept where dept.deptno = emp.deptno group by DNAME having count(*) > 2;
+select empno from emp UNION select deptno from dept;
+select ename,sal,comm from emp union select dname,round(avg(sal),2),avg(comm) FROM emp,dept where emp.deptno = dept.deptno group by dname;
+select ename,null,sal,comm,null from emp union select null,dname,round(avg(sal),2),avg(comm),null FROM emp,dept where emp.deptno = dept.deptno group by dname;
+select ename,null,null,null from emp union select null,dname,null,null FROM emp,dept where emp.deptno = dept.deptno group by dname union select ename,dname,(sal+comm)/7,12 FROM emp,dept where emp.deptno = dept.deptno;

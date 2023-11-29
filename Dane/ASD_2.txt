@@ -1,0 +1,178 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int fib(int n) {
+    static vector<int> table;
+    if (n <= 1) {
+        return n;
+    }
+    else if (n >= table.size()) {
+        table.resize(n+1);
+    }
+
+    if (table[n] == 0) {
+        table[n] = fib(n-1) + fib(n-2);
+    }
+    return table[n];
+}
+
+
+
+
+
+int main()
+{
+    cout << fib(20) << endl;
+}
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+typedef struct Drzewo{
+    int liczba;
+    struct Drzewo *L;
+    struct Drzewo *P;
+};
+
+void insert(struct Drzewo **korzen, int wartosc)
+{
+    if(*korzen == NULL)
+    {
+        *korzen = (struct Drzewo *)malloc(sizeof(struct Drzewo));
+        (*korzen)->liczba = wartosc;
+        (*korzen)->L = NULL;
+        (*korzen)->P = NULL;
+    }
+    else
+    {
+        if (wartosc < (*korzen)->liczba)
+        {
+            insert(&((*korzen)->L),wartosc);
+        }
+        else if(wartosc > (*korzen)->liczba)
+        {
+            insert(&((*korzen)->P),wartosc);
+        }
+    }
+}
+
+int znajdz(struct Drzewo *korzen, int wartosc)
+{
+    if(korzen==NULL)
+    {
+        return 0;
+    }
+    if(korzen->liczba == wartosc)
+    {
+        return korzen->liczba;
+    }
+    if(wartosc < korzen->liczba)
+    {
+        return znajdz(korzen->L, wartosc);
+    }
+    else
+    {
+        return znajdz(korzen->P, wartosc);
+    }
+}
+
+void KLP(struct Drzewo *korzen)
+{
+    if(korzen != NULL)
+    {
+        cout << korzen->liczba << " ";
+        KLP(korzen->L);
+        KLP(korzen->P);
+    }
+}
+
+
+int main()
+{
+    struct Drzewo *korzen = NULL;
+    insert(&korzen, 8);
+    insert(&korzen, 4);
+    insert(&korzen, 9);
+    insert(&korzen, 6);
+    insert(&korzen, 2);
+    insert(&korzen, 7);
+    insert(&korzen, 4);
+    insert(&korzen, 2);
+    insert(&korzen, 8);
+    insert(&korzen, 3);
+    KLP(korzen);
+}
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int sr;
+bool wyszukiwanie_binarne(int l,int p, int szukana_liczba, int tab[])
+{
+    while(l<=p)
+    {
+        sr = (l+p)/2;
+        if (tab[sr] == szukana_liczba) return true;
+        else if (tab[sr] > szukana_liczba)
+        {
+            return wyszukiwanie_binarne(l,sr-1,szukana_liczba,tab);
+        }
+        else
+        {
+            return wyszukiwanie_binarne(sr+1,p,szukana_liczba,tab);
+        }
+    }
+    return false;
+}
+
+
+int main()
+{
+    ifstream input("C:\\Users\\user\\CLionProjects\\ASD_2\\In0209.txt");
+    ofstream output("C:\\Users\\user\\CLionProjects\\ASD_2\\Out0209.txt");
+
+    int n;
+    input >> n;
+    int tab_nieposortowana[n],tab_posortowana[n];
+    
+    //wczytanie danych z pliku
+    for(int i=0; i<n; i++)
+    {
+        input >> tab_nieposortowana[i];
+    }
+    cout << endl;
+    for(int i=0; i<n; i++)
+    {
+        input >> tab_posortowana[i];
+    }
+
+    // algorytm
+    int szukana;
+    for(int i=0; i<n; i++)
+    {
+        szukana = tab_nieposortowana[i];
+        if(wyszukiwanie_binarne(0,n-1,szukana,tab_posortowana) == true)
+        {
+            output << szukana << " ";
+        }
+    }
+}

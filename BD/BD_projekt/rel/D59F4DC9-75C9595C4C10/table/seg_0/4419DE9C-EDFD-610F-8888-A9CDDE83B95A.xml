@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4419DE9C-EDFD-610F-8888-A9CDDE83B95A" name="Teksty_utworów">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>C705CC89-F60C-99D1-EDEA-782807A0A5E7</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<ordsAlias>teksty_utworow</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Utworu" id="B8B4A4D4-24E6-D648-E2CD-44ACDBEF58D1">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>3E70E49E-6B2A-52B0-DE0F-F3310F9A5DD8</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="67D4EC95-5998-3A3B-134E-B61F2BBBA605" referredColumn="B92971EE-E27E-0266-3322-58862EF8A11E"/>
+</associations>
+</Column>
+<Column name="Tekst" id="75C3DE61-AA5C-73B3-EEE7-FD7EE1212248">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>FA4C64BB-C653-7A2E-75FB-4ACE868277A8</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C62FE0FB-F883-F7C2-68B1-0C290510DFB1" name="Teksty_utworów_Utwory_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 09:56:19 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8B4A4D4-24E6-D648-E2CD-44ACDBEF58D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
