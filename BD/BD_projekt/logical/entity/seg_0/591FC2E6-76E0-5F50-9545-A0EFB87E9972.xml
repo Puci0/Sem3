@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="591FC2E6-76E0-5F50-9545-A0EFB87E9972" name="Podcasty">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:03:57 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Podcastu" id="0C57A7CE-173B-3574-DA36-C4741C61A2CA">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:04:11 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Wykonawcy" id="21BB03C1-9AE0-2874-D8D4-A02DF56E2B62">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:04:29 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data_wydania" id="D7CE26B8-CC37-BF41-122E-DB0AE2F92B47">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:04:38 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Czas" id="319FCCEA-DED8-20F5-599C-EE7AF743ED85">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:04:52 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwa" id="DCE47088-1276-65C9-5086-40897E08C5D2">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:05:11 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B6BE690E-B327-6B0A-FCE5-FD1ED91BBFC0" name="Podcasty PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:04:25 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<engineerTo>
+<item key="D59F4DC9-7435-6813-56C2-75C9595C4C10" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0C57A7CE-173B-3574-DA36-C4741C61A2CA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="623904AE-EAB4-9CAE-D403-430A5F69AC8C" name="Wydarzenia">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>72F129DA-6E85-9071-2DA8-BB157C98D2A7</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Wydarzenia" id="7A768EA4-78E2-3D45-4DEA-CB16AE564D01">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>5BD1F6B2-905B-A5A6-789D-32FEA8D150BD</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Wykonawcy" id="C1676536-2354-4421-9AC6-EA1713655D4D">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>A387B8FF-7A65-F8A2-DE80-84588DD52C04</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="73A0D693-31A7-6D92-8DA8-217A70E26486" referredColumn="7D319CC9-9C12-8BDD-ECCB-F096D76CE1E1"/>
+</associations>
+</Column>
+<Column name="Data_wydarzenia" id="12AC80DB-1C32-63E7-9F04-CF1DFA06F1B1">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>59231A89-31FC-E41C-69AB-54D4354780B8</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Miejsce_wydarzenia" id="8A52CDCA-E01F-FFD5-C947-2B3759DFDAF8">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>FF1744FB-5B92-EA2F-0949-77DED6D96D3B</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C382595B-99E8-24A2-535C-C9BD87F5DA1D" name="Wydarzenia_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>5C03529B-B08C-1D6C-8ECF-335521164E70</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A768EA4-78E2-3D45-4DEA-CB16AE564D01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2F298C76-F51E-B9D7-F54A-11E2893C0EBA" name="Wydarzenia_Wykonawcy_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:04:31 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1676536-2354-4421-9AC6-EA1713655D4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3C7DFDC6-D182-33E5-F20D-84CF885FA14D" containerWithKeyObject="6C0D9D1A-DBE4-451D-780C-BA741C1DDF9D" localFKIndex="837BF73F-9D3F-1B89-D9CE-FC7CB9BAE89F" name="Utwory_w_playlistach_Utwory_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 09:48:47 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<referredTableLongName>Utwory</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C3228553-9968-1C64-DB3D-AC4E2E8FF307</referredTableID>
+<keyObject>D89BE073-1DA2-1C13-8A6C-1F62CB67437C</keyObject>
+<referredKeyID>D89BE073-1DA2-1C13-8A6C-1F62CB67437C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Utworu</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

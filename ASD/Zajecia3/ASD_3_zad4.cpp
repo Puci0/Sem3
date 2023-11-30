@@ -80,14 +80,19 @@ void JarnikPrim(const vector<vector<Krawedz>>& lista, int ilosc_wierzcholkow) {
     output << endl << ilosc_wag;
 }
 
+<<<<<<< HEAD
 int main()
 {
+=======
+int main() {
+>>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
     ifstream input("In0304.txt");
     int ilosc_wierzcholkow;
     input >> ilosc_wierzcholkow;
     vector<vector<Krawedz>> lista(ilosc_wierzcholkow);
     string linia;
     input.ignore();
+<<<<<<< HEAD
     for(int i=1; i<=ilosc_wierzcholkow;i++)
     {
         if(getline(input, linia))
@@ -97,13 +102,25 @@ int main()
             int liczba;
             while(stream >> liczba)
             {
+=======
+    for (int i = 1; i <= ilosc_wierzcholkow; i++) {
+        if (getline(input, linia)) {
+            int ilosc_liczb_w_linii = 0;
+            istringstream stream(linia);
+            int liczba;
+            while (stream >> liczba) {
+>>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
                 ilosc_liczb_w_linii++;
             }
 
             stream.clear();
             stream.seekg(0, ios::beg);
+<<<<<<< HEAD
             for(int j=0;j<ilosc_liczb_w_linii;j+=2)
             {
+=======
+            for (int j = 0; j < ilosc_liczb_w_linii; j += 2) {
+>>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
                 int zrodlowy_wierzcholek = i;
                 int docelowy_wierzcholek, waga;
 
@@ -116,5 +133,9 @@ int main()
     }
 //    wyswietlListe(lista);
 //    cout << endl;
+<<<<<<< HEAD
     JarnikPrim(lista,ilosc_wierzcholkow);
+=======
+    JarnikPrim(lista, ilosc_wierzcholkow);
+>>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
 }

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4516BAE2-F096-0DC3-3BC4-C6F61DB8198D" containerWithKeyObject="331D13B2-B9A9-60A0-84C0-87810B8C3F71" localFKIndex="C5BFA064-B38E-2F48-1CFC-0D7F8A76B350" name="Stacje_radiowe_Gatunki_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:07:21 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<referredTableLongName>Gatunki</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5D7D8427-AE98-C2E0-C9E8-860F767CE0D2</referredTableID>
+<keyObject>1DFDDDB9-13BC-C198-BC4B-D0D4588ED76C</keyObject>
+<referredKeyID>1DFDDDB9-13BC-C198-BC4B-D0D4588ED76C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Gatunku</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

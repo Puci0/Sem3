@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="331D13B2-B9A9-60A0-84C0-87810B8C3F71" name="Stacje_radiowe">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>4E299D0F-F143-A540-EAE3-26C6EE63EA60</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Radia" id="D89FE75F-8700-4CDC-DFA1-58723B18A43A">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>04B0E599-1FCD-4A2C-FF5A-38C4A9DB67B6</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_Gatunku" id="6EF5CECB-5694-5418-17C0-E5181AD568D0">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>4227F255-D610-5448-C3A8-AFC86E8681B2</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4516BAE2-F096-0DC3-3BC4-C6F61DB8198D" referredColumn="0AC4DF9B-1260-FBE4-E610-229D14C026C6"/>
+</associations>
+</Column>
+<Column name="Nazwa" id="A4653EB0-FCC6-D5CD-5129-834856EB0D66">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>0330D2A8-97A5-823A-CD75-26D6BA8CC6D3</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Data_utworzenia" id="EF0BA5A2-9495-9E75-C116-0E3E26281176">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>D289F8D6-3B7E-59E6-3E3F-D994E3B00374</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DD3FD6E-0077-77D9-1D0E-B07506A849EA" name="Stacje_radiowe_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-22 18:32:20 UTC</createdTime>
+<generatorID>6B628EDD-40C7-9D3A-AC57-029E9BFB62CA</generatorID>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D89FE75F-8700-4CDC-DFA1-58723B18A43A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5BFA064-B38E-2F48-1CFC-0D7F8A76B350" name="Stacje_radiowe_Gatunki_FK">
+<createdBy>User</createdBy>
+<createdTime>2023-11-24 10:07:21 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EF5CECB-5694-5418-17C0-E5181AD568D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
