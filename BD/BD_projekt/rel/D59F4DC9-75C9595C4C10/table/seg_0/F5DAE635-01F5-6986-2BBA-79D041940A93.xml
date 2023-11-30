@@ -22,7 +22,7 @@
 <colAssociation fkAssociation="5F955148-0E52-BF53-A8AE-9207A02E0DEF" referredColumn="7D319CC9-9C12-8BDD-ECCB-F096D76CE1E1"/>
 </associations>
 </Column>
-<Column name="ID_Wspolpracy" id="2E3AEED8-E4F8-FDC9-DCCF-66767435228F">
+<Column name="ID_Wspownika" id="2E3AEED8-E4F8-FDC9-DCCF-66767435228F">
 <createdBy>User</createdBy>
 <createdTime>2023-11-22 18:32:20 UTC</createdTime>
 <generatorID>C39122AF-CC9B-4D70-CA2D-74187F3DD66F</generatorID>
