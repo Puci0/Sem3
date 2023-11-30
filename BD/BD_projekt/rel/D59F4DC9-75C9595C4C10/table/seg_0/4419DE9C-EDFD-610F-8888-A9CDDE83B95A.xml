@@ -36,6 +36,17 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="06F84975-C643-6E00-ED0E-F5FB802B9501" name="Teksty_utworow_PK">
+<createdBy>wojte</createdBy>
+<createdTime>2023-11-30 19:40:11 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8B4A4D4-24E6-D648-E2CD-44ACDBEF58D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="C62FE0FB-F883-F7C2-68B1-0C290510DFB1" name="Teksty_utworów_Utwory_FK">
 <createdBy>User</createdBy>
 <createdTime>2023-11-24 09:56:19 UTC</createdTime>
