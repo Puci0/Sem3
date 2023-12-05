@@ -1,0 +1,86 @@
+Wykonawcy:
+CREATE TABLE Wykonawcy(
+ID_Wykonawcy(3) INT(3) NOT NULL AUTO_INCREMENT,
+Nazwa_wykonawcy varchar(100) NOT NULL,
+Kraj_pochodzenia varchar(100),
+Opis varchar(500)
+PRIMARY KEY(ID_Wykonawcy));
+
+Albumy:
+CREATE TABLE Albumy(
+ID_Albumu INT(3) NOT NULL AUTO_INCREMENT,
+ID_Wykonawcy INT(3) NOT NULL,
+Nazwa varchar(100) NOT NULL,
+Data_wydania DATE NOT NULL,
+PRIMARY KEY(ID_Albumu),
+FOREIGN KEY(ID_Wykonawcy) REFERENCES Wykonawcy(ID_Wykonawcy));
+
+Utwory:
+CREATE TABLE Utwory(
+ID_Utworu INT(3) NOT NULL AUTO_INCREMENT,
+ID_Wykonawcy INT(3) NOT NULL,
+ID_Albumu INT(3),
+Tytul_utworu VARCHAR(100) NOT NULL,
+Data_wydania DATE NOT NULL,
+Czas_trwania TIME NOT NULL,
+PRIMARY KEY(ID_Utworu),
+FOREIGN KEY(ID_Wykonawcy) REFERENCES Wykonawcy(ID_Wykonawcy),
+FOREIGN KEY(ID_Albumu) REFERENCES Albumy(ID_Albumu));
+
+Statystyki_utworow:
+CREATE TABLE Statystyki_utworow(
+ID_Utworu INT(3) NOT NULL,
+Ilosc_odtworzen INT(10) NOT NULL,
+FOREIGN KEY(ID_Utworu) REFERENCES Utwory(ID_Utworu));
+
+Nowosci:
+CREATE TABLE Nowosci(
+ID_Utworu INT(3) NOT NULL,
+Data_wydania DATE NOT NULL,
+FOREIGN KEY(ID_Utworu) REFERENCES Utwory(ID_Utworu));
+
+Oceny_utworow:
+CREATE TABLE Oceny_utworow(
+ID_Oceny INT(3) NOT NULL AUTO_INCREMENT,
+ID_Utworu INT(3) NOT NULL,
+Ocena VARCHAR(1000) NOT NULL,
+FOREIGN KEY(ID_Utworu) REFERENCES Utwory(ID_Utworu),
+PRIMARY KEY(ID_Oceny));
+
+Gatunki:
+CREATE TABLE Gatunki(
+ID_Gatunku INT(3) NOT NULL AUTO_INCREMENT,
+Nazwa VARCHAR(100) NOT NULL,
+PRIMARY KEY(ID_Gatunku));
+
+Gatunki_utworow:
+CREATE TABLE Gatunki_utworow(
+ID_Utworu INT(3) NOT NULL,
+ID_Gatunku INT(3) NOT NULL,
+FOREIGN KEY(ID_Utworu) REFERENCES Utwory(ID_Utworu),
+FOREIGN KEY(ID_Gatunku) REFERENCES Gatunki(ID_Gatunku));
+
+Uzytkownicy:
+CREATE TABLE Uzytkownicy(
+ID_Uzytkownika INT(3) NOT NULL AUTO_INCREMENT,
+Nazwa VARCHAR(100) NOT NULL,
+Haslo VARCHAR(50) NOT NULL,
+Email VARCHAR(100) NOT NULL,
+PRIMARY KEY(ID_Uzytkownika));
+
+Playlisty:
+CREATE TABLE Playlisty(
+ID_Playlisty INT(3) NOT NULL AUTO_INCREMENT,
+ID_Uzytkownika INT(3) NOT NULL,
+Nazwa VARCHAR(100) NOT NULL,
+Data_utworzenia DATE NOT NULL,
+PRIMARY KEY(ID_Playlisty),
+FOREIGN KEY(ID_Uzytkownika) REFERENCES Uzytkownicy(ID_Uzytkownika));
+
+Utwory_w_playlistach:
+CREATE TABLE Utwory_w_playlistach(
+ID_Playlisty INT(3) NOT NULL,
+ID_Utworu INT(3) NOT NULL,
+FOREIGN KEY(ID_Playlisty) REFERENCES Playlisty(ID_Playlisty),
+FOREIGN KEY(ID_Utworu) REFERENCES Utwory(ID_Utworu));
+
