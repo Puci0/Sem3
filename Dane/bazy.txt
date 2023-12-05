@@ -1,3 +1,5 @@
+kriejt dejtabejz spotifaj;
+
 Wykonawcy:
 CREATE TABLE Wykonawcy(
 ID_Wykonawcy(3) INT(3) NOT NULL AUTO_INCREMENT,
@@ -124,7 +126,7 @@ CREATE TABLE Historia_odtwarzania(
 ID_Uzytkownika INT(3) NOT NULL,
 ID_Utworu INT(3) NOT NULL,
 Data_odtworzenia DATETIME NOT NULL,
-FOREIGN KEY(Uzytkownika) REFERENCES Uzytkownicy(ID_Uzytkownika),
+FOREIGN KEY(ID_Uzytkownika) REFERENCES Uzytkownicy(ID_Uzytkownika),
 FOREIGN KEY(ID_Utworu) REFERENCES Utwory(ID_Utworu));
 
 Znajomi:
@@ -178,7 +180,7 @@ CREATE TABLE Preferencje_uzytkownikow(
 ID_Uzytkownika INT(3) NOT NULL,
 ID_Gatunku INT(3) NOT NULL,
 FOREIGN KEY(ID_Uzytkownika) REFERENCES Uzytkownicy(ID_Uzytkownika),
-FOREIGN KEY(ID_Gatunku) REFERENCES Gatunki(Gatunku));
+FOREIGN KEY(ID_Gatunku) REFERENCES Gatunki(ID_Gatunku));
 
 Stacje_radiowe:
 CREATE TABLE Stacje_radiowe(
