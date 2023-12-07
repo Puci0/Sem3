@@ -10,8 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e53fbe0-285e-4f74-850b-def8563f0beb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Zajecia3/In0304.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/1d.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1d.exe" beforeDir="false" afterPath="$PROJECT_DIR$/1d.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/In0201.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/In0203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/In0203.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/In0207.txt" beforeDir="false" afterPath="$PROJECT_DIR$/In0207.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Out0201.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Out0203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Out0203.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Out0207.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Out0207.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Out0209.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Out0209.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BD/BD_projekt/datatypes/Diagrams.local" beforeDir="false" afterPath="$PROJECT_DIR$/../../BD/BD_projekt/datatypes/Diagrams.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BD/BD_projekt/logical/Objects.local" beforeDir="false" afterPath="$PROJECT_DIR$/../../BD/BD_projekt/logical/Objects.local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../BD/BD_projekt/rel/D59F4DC9-75C9595C4C10/Objects.local" beforeDir="false" afterPath="$PROJECT_DIR$/../../BD/BD_projekt/rel/D59F4DC9-75C9595C4C10/Objects.local" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,23 +47,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Sem3/ASD&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/User/Desktop/Sem3/ASD/Zajecia2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="C/C++ File.1d.cpp">
     <configuration name="1d.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Zajecia2" TARGET_NAME="1d.cpp" CONFIG_NAME="1d.cpp">
       <option name="sourceFile" value="1d.cpp" />
@@ -100,6 +110,7 @@
       <workItem from="1699905406898" duration="763000" />
       <workItem from="1700416090692" duration="384000" />
       <workItem from="1701101007625" duration="303000" />
+      <workItem from="1701947091210" duration="356000" />
     </task>
     <servers />
   </component>

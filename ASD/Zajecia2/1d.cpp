@@ -35,8 +35,8 @@ void quick_sort(vector<int> &tab,int left,int right)
 int main()
 {
     vector<int> tab;
-    ifstream input("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\In0201.txt");
-    ofstream output("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia2\\Out0201.txt");
+    ifstream input("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia2\\In0201.txt");
+    ofstream output("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia2\\Out0201.txt");
     int value;
     while(input >> value)
     {
