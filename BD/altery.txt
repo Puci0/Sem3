@@ -1,0 +1,16 @@
+ALTER TABLE wspolpracownicy ADD PRIMARY KEY(ID_Wykonawcy,ID_Wspolpracownika,ID_Utworu);
+ALTER TABLE Znajomi ADD PRIMARY KEY(ID_Uzytkownika,ID_Znajomego);
+ALTER TABLE Statystyki_uzytkownikow ADD PRIMARY KEY(ID_Uzytkownika);
+ALTER TABLE Preferencje_uzytkownikow ADD PRIMARY KEY(ID_Uzytkownika);
+ALTER TABLE Utwory_w_playlistach ADD PRIMARY KEY(ID_Playlisty,ID_Utworu);
+ALTER TABLE Gatunki_utworow ADD PRIMARY KEY(ID_Gatunku,ID_Utworu);
+ALTER TABLE statystyki_utworow ADD PRIMARY KEY(ID_Utworu);
+
+ALTER TABLE Subskrypcje_uzytkownikow ADD ID_Subskrypcji_uzytkownikow INTEGER(3);
+ALTER TABLE Subskrypcje_uzytkownikow ADD PRIMARY KEY(ID_subskrypcji_uzytkownikow);
+ALTER TABLE Subskrypcje_uzytkownikow MODIFY ID_Subskrypcji_uzytkownikow INTEGER(3) NOT NULL AUTO_INCREMENT FIRST;
+
+ALTER TABLE Historia_wyszukiwania ADD ID_Historii_wyszukiwania INTEGER(3);
+ALTER TABLE Historia_wyszukiwania ADD PRIMARY KEY(ID_Historii_wyszukiwania);
+ALTER TABLE Historia_wyszukiwania MODIFY ID_Historii_wyszukiwania INTEGER(3) NOT NULL AUTO_INCREMENT FIRST;
+

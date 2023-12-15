@@ -38,6 +38,18 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="37B7C413-2486-5D3A-69E6-7D172EED4D0E" name="Utwory_w_playlistach_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-12-15 09:58:39 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21F21972-3FDD-6524-632B-C1BE51858BFE"/>
+<colUsage columnID="F030EB20-982C-DF68-9406-2C930C9B4C28"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="86725818-C769-C576-8D68-3C2115A3A63C" name="Utwory_w_playlistach_Playlisty_FK">
 <createdBy>User</createdBy>
 <createdTime>2023-11-24 09:48:32 UTC</createdTime>
