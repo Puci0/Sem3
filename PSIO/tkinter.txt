@@ -1,0 +1,30 @@
+from tkinter import *
+import tkinter as tk
+import math
+import numpy as np
+
+ARROW_LENGTH = 250
+HEIGHT = 370
+WIDTH = 600
+AMOUNT_OF_SPEAKERS = 7
+WIDTH_SPEAKER = 30
+HEIGHT_SPEAKER = 30
+def coordinates(angle):
+    x = WIDTH/2-WIDTH_SPEAKER-np.cos(np.radians(angle))*ARROW_LENGTH
+    y = HEIGHT-HEIGHT_SPEAKER-np.sin(np.radians(angle))*ARROW_LENGTH
+    return x,y
+
+print(coordinates(90))
+
+root = tk.Tk()
+root.title("yś")
+root.geometry('600x400')
+
+for i in range(0,AMOUNT_OF_SPEAKERS):
+    canvas = tk.Canvas(root, width=30, height=30)
+    canvas.configure(bg='blue')
+    angle = i*(180/(AMOUNT_OF_SPEAKERS-1))
+    x,y = coordinates(angle)
+    print(x," ",y)
+    canvas.place(x=x,y=y)
+root.mainloop()
