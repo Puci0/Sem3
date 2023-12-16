@@ -6,7 +6,7 @@ from pprint import pprint
 ARROW_LENGTH = 200
 HEIGHT = 390
 WIDTH = 600
-AMOUNT_OF_SPEAKERS = 7
+AMOUNT_OF_SPEAKERS = 9
 WIDTH_SPEAKER = 30
 HEIGHT_SPEAKER = 30
 ANGLE = 180/(AMOUNT_OF_SPEAKERS-1)
@@ -14,8 +14,8 @@ ANGLE = 180/(AMOUNT_OF_SPEAKERS-1)
 
 
 def coordinates_of_speakers(angle):
-    x = WIDTH / 2 - np.cos(np.radians(angle)) * (ARROW_LENGTH+50) - 3
-    y = HEIGHT - np.sin(np.radians(angle)) * (ARROW_LENGTH+50) - 85
+    x = WIDTH / 2 - np.cos(np.radians(angle)) * 250-3
+    y = HEIGHT - np.sin(np.radians(angle)) * 250 - 85
     return x,y
 
 def coordinates_of_arrow(angle):
@@ -51,7 +51,7 @@ line_canvas.create_line(300,334,dictionary_arrow[5][0]+15, dictionary_arrow[5][1
 #     speakers_canvas.place(x=x-15,y=y+15)
 angle_of_rotate = 0
 for i in range(0,AMOUNT_OF_SPEAKERS):
-    speakers_canvas = tk.Canvas(root,highlightthickness=0, width=90, height=90,background='#00c3e3')
+    speakers_canvas = tk.Canvas(root,highlightthickness=0, width=70, height=70,background='#00c3e3')
     speakers_canvas.pack()
     image_path = "C:\\Users\\user\\PycharmProjects\\numpy\\speaker.png"
     original_image = Image.open(image_path)
