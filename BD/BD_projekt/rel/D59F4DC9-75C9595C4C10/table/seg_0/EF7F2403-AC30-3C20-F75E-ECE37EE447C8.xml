@@ -38,6 +38,18 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E33216C-5236-F309-F347-546C5C4DA854" name="Gatunki_utworow_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-12-15 09:59:13 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="282181F2-2E0A-27E7-7B16-317060D799C2"/>
+<colUsage columnID="A6667923-C195-B0FC-5992-26860B5CBE76"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="DBCAFB27-12ED-61F6-2DE8-A341777A72C9" name="Gatunki_utworów_Gatunki_FK">
 <createdBy>User</createdBy>
 <createdTime>2023-11-24 09:43:28 UTC</createdTime>

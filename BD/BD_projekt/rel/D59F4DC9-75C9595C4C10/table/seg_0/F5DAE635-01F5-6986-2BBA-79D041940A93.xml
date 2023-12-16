@@ -52,6 +52,19 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1F7C379F-09D9-94AB-8FFF-5A811F9E1A84" name="Wspolpracownicy_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-12-15 09:51:50 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03A583AD-5F78-395E-3896-F2E287E14959"/>
+<colUsage columnID="2E3AEED8-E4F8-FDC9-DCCF-66767435228F"/>
+<colUsage columnID="C3AF5B05-C4A7-C5AE-8FC7-68684D37FDE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="4D795DC8-1A9F-96E9-927E-BB81BFD48ED6" name="Wspolpracownicy_Utwory_FK">
 <createdBy>User</createdBy>
 <createdTime>2023-11-24 09:49:22 UTC</createdTime>

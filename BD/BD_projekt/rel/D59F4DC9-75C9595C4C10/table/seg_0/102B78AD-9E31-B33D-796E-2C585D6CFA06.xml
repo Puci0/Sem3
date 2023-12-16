@@ -38,6 +38,18 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="67BE8C43-CE81-1326-4B88-EE982DCBC465" name="Znajomi_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-12-15 09:59:27 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF7C3B6A-9215-E259-4DB5-A6F35D13D063"/>
+<colUsage columnID="2E07770C-B46D-0BAC-BB69-927FCD220587"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="0B4DE119-5771-1B26-F447-2972472511A7" name="Znajomi_Uzytkownicy_FK">
 <createdBy>User</createdBy>
 <createdTime>2023-11-24 10:06:02 UTC</createdTime>

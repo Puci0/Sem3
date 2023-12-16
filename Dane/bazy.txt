@@ -2,10 +2,10 @@ kriejt dejtabejz spotifaj;
 
 Wykonawcy:
 CREATE TABLE Wykonawcy(
-ID_Wykonawcy(3) INT(3) NOT NULL AUTO_INCREMENT,
+ID_Wykonawcy INT(3) NOT NULL AUTO_INCREMENT,
 Nazwa_wykonawcy varchar(100) NOT NULL,
 Kraj_pochodzenia varchar(100),
-Opis varchar(500)
+Opis varchar(500),
 PRIMARY KEY(ID_Wykonawcy));
 
 Albumy:

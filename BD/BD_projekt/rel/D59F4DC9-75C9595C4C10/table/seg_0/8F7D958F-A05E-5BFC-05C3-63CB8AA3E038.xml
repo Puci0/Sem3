@@ -8,6 +8,16 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Subskrypcji_uzytkownikow" id="774408EC-C1EF-433D-75C2-7C5D289A912F">
+<createdBy>User</createdBy>
+<createdTime>2023-12-15 10:01:24 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="ID_Uzytkownika" id="9906038D-147A-EA21-6262-7213691B4D03">
 <createdBy>User</createdBy>
 <createdTime>2023-11-22 18:32:20 UTC</createdTime>
@@ -60,6 +70,17 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="442F1072-7CDC-1B41-060A-E419D339B47A" name="Subskrypcje_uzytkownikow_PK">
+<createdBy>User</createdBy>
+<createdTime>2023-12-15 10:01:26 UTC</createdTime>
+<ownerDesignName>BD_projekt</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="774408EC-C1EF-433D-75C2-7C5D289A912F"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="3532CF94-47B9-745B-5B01-23172296D893" name="Subskrypcje_uzytkownikow_Subskrypcje_FK">
 <createdBy>User</createdBy>
 <createdTime>2023-11-24 10:04:02 UTC</createdTime>
