@@ -1,0 +1,195 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <limits>
+using namespace std;
+
+struct Graf {
+    int docelowy_wierzcholek;
+    mutable int waga;
+};
+
+struct dane {
+    int dystans;
+    int poprzednik;
+};
+
+void dodajKrawedz(vector<vector<Graf>>& lista, int zrodlowy_wierzcholek, int docelowy_wierzcholek, int waga) {
+    Graf krawedz;
+    krawedz.docelowy_wierzcholek = docelowy_wierzcholek;
+    krawedz.waga = waga;
+    lista[zrodlowy_wierzcholek].push_back(krawedz);
+}
+
+const int INFINITE_WEIGHT = numeric_limits<int>::max();
+dane* BellmanFord(int** macierz, int n, int start) {
+    dane* tab = new dane[n];
+    for (int i = 0; i < n; i++) {
+        tab[i].dystans = numeric_limits<int>::max();
+        tab[i].poprzednik = -1;
+    }
+    tab[start].dystans = 0;
+
+    for (int k = 0; k < n - 1; k++) {
+        for (int u = 0; u < n; u++) {
+            for (int v = 0; v < n; v++) {
+                if (macierz[u][v] != INFINITE_WEIGHT &&
+                    tab[v].dystans > tab[u].dystans + macierz[u][v]) {
+                    tab[v].dystans = tab[u].dystans + macierz[u][v];
+                    tab[v].poprzednik = u;
+                }
+            }
+        }
+    }
+    return tab;
+}
+
+const int INFINITY = numeric_limits<int>::max();
+
+void Dijkstra(vector<vector<Graf>>& lista_incydencji, int start, int liczba_wierzcholkow, dane* tab) {
+    const int INFINITY = numeric_limits<int>::max();
+    vector<int> dystanse(liczba_wierzcholkow, INFINITY);
+    vector<bool> odwiedzone(liczba_wierzcholkow, false);
+
+    dystanse[start] = 0;
+
+    for (int count = 0; count < liczba_wierzcholkow; ++count) {
+        int u = -1;
+        int minDistance = INFINITY;
+
+        for (int v = 0; v < liczba_wierzcholkow; ++v) {
+            if (!odwiedzone[v] && dystanse[v] <= minDistance) {
+                minDistance = dystanse[v];
+                u = v;
+            }
+        }
+
+        if (u == -1 || u > liczba_wierzcholkow) {
+            break;
+        }
+
+        odwiedzone[u] = true;
+
+        for (const auto& krawedz : lista_incydencji[u]) {
+            int v = krawedz.docelowy_wierzcholek;
+            int waga = krawedz.waga;
+            if (dystanse[u] != INFINITY && dystanse[v] > dystanse[u] + waga) {
+                dystanse[v] = dystanse[u] + waga;
+                krawedz.waga = dystanse[u] + waga;
+                tab[v].dystans = dystanse[v];
+                tab[v].poprzednik = u;
+            }
+        }
+    }
+    cout << "[ ";
+    for (int i = 1; i < liczba_wierzcholkow; ++i) {
+        if (dystanse[i] == INFINITY) {
+            cout << "0 ";
+        } else {
+            cout << dystanse[i] << " ";
+        }
+    }
+    cout << "]";
+
+//    cout << " [ ";
+//    for (int i = 1; i < liczba_wierzcholkow; ++i) {
+//        cout << tab[i].poprzednik << " ";
+//    }
+//    cout << "] " << endl;
+
+}
+
+
+int main() {
+    ifstream plik("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia4\\4.txt");
+    string linia;
+    getline(plik,linia);
+    istringstream line(linia);
+    int liczba_wierzcholkow;
+    line >> liczba_wierzcholkow;
+    liczba_wierzcholkow+=1;
+    vector<vector<Graf>> lista_incydencji(liczba_wierzcholkow);
+
+    for(int j = 1; j < liczba_wierzcholkow; j++) {
+        dodajKrawedz(lista_incydencji, 0, j, 0);
+    }
+
+    int docelowy_wierzcholek, waga, i = 1;
+    while (getline(plik, linia)) {
+        istringstream line(linia);
+        while (line >> docelowy_wierzcholek >> waga) {
+            dodajKrawedz(lista_incydencji, i, docelowy_wierzcholek, waga);
+        }
+        i++;
+    }
+    for (int i = 0; i < liczba_wierzcholkow; ++i) {
+        cout << "Wierzcholek " << i << ": ";
+        for (const auto& krawedz : lista_incydencji[i]) {
+            cout << "(" << krawedz.docelowy_wierzcholek << ", " << krawedz.waga << ") ";
+        }
+        cout << endl;
+    }
+
+    int** macierz = new int*[liczba_wierzcholkow];
+    for (int i = 0; i < liczba_wierzcholkow; i++) {
+        macierz[i] = new int[liczba_wierzcholkow];
+        for (int j = 0; j < liczba_wierzcholkow; j++) {
+            macierz[i][j] = INFINITE_WEIGHT;
+        }
+    }
+
+// Przepisanie danych z listy incydencji do macierzy sąsiedztwa
+    for (int i = 0; i < liczba_wierzcholkow; i++) {
+        for (const auto& krawedz : lista_incydencji[i]) {
+            macierz[i][krawedz.docelowy_wierzcholek] = krawedz.waga;
+        }
+    }
+
+//    cout << "Macierz sąsiedztwa:" << endl;
+//    for (int i = 0; i < liczba_wierzcholkow; i++) {
+//        for (int j = 0; j < liczba_wierzcholkow; j++) {
+//            cout << macierz[i][j] << " ";
+//        }
+//        cout << endl;
+//    }
+    int s=0;
+    dane* tab = BellmanFord(macierz, liczba_wierzcholkow, s);
+    cout << "Wynik algorytmu Bellmana-Forda:" << endl;
+    for (int i = 0; i < liczba_wierzcholkow; i++) {
+        cout << tab[i].dystans << " ";
+    }
+
+    for (int u = 0; u < liczba_wierzcholkow; u++) {
+        for (const auto& krawedz : lista_incydencji[u]) {
+            int v = krawedz.docelowy_wierzcholek;
+            if (macierz[u][v] != INFINITE_WEIGHT) {
+                krawedz.waga = krawedz.waga + tab[u].dystans - tab[v].dystans;
+            }
+        }
+    }
+    cout << endl;
+    for (int i = 0; i < liczba_wierzcholkow; ++i) {
+        cout << "Wierzcholek " << i << ": ";
+        for (const auto& krawedz : lista_incydencji[i]) {
+            cout << "(" << krawedz.docelowy_wierzcholek << ", " << krawedz.waga << ") ";
+        }
+        cout << endl;
+    }
+
+    for (int i = 1; i < liczba_wierzcholkow; ++i) {
+        Dijkstra(lista_incydencji, i, liczba_wierzcholkow, tab);
+    }
+    cout << endl;
+    s=1;
+    tab = BellmanFord(macierz, liczba_wierzcholkow, s);
+
+    cout <<  "[ ";
+    for (int i = 0; i < liczba_wierzcholkow; i++) {
+        if(tab[i].dystans<INFINITY)
+        {
+            cout << tab[i].dystans << " ";
+        }
+    }
+    cout << "]";
+}
