@@ -9,7 +9,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9e53fbe0-285e-4f74-850b-def8563f0beb" name="Changes" comment="" />
+=======
+    <list default="true" id="9e53fbe0-285e-4f74-850b-def8563f0beb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Zajecia4/4.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zajecia4/4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia3/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> e5e6c6fae04ad2e778f1dfbb1b8736f0a8ca3516
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +52,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/Sem3/ASD/Zajecia2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Sem3/ASD/Zajecia4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -99,7 +108,14 @@
       <workItem from="1701101007625" duration="303000" />
       <workItem from="1701947091210" duration="356000" />
       <workItem from="1702553876546" duration="2042000" />
+<<<<<<< HEAD
       <workItem from="1702940399365" duration="86000" />
+=======
+      <workItem from="1702837665031" duration="574000" />
+      <workItem from="1702843616590" duration="597000" />
+      <workItem from="1702924204628" duration="21000" />
+      <workItem from="1702924824215" duration="14000" />
+>>>>>>> e5e6c6fae04ad2e778f1dfbb1b8736f0a8ca3516
     </task>
     <servers />
   </component>
