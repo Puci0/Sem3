@@ -9,15 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e53fbe0-285e-4f74-850b-def8563f0beb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/1d.exe" beforeDir="false" afterPath="$PROJECT_DIR$/1d.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/In0201.txt" beforeDir="false" afterPath="$PROJECT_DIR$/In0201.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/In0203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/In0203.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Out0201.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Out0201.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Out0203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Out0203.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dane/chuj.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="9e53fbe0-285e-4f74-850b-def8563f0beb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +99,7 @@
       <workItem from="1701101007625" duration="303000" />
       <workItem from="1701947091210" duration="356000" />
       <workItem from="1702553876546" duration="2042000" />
+      <workItem from="1702940399365" duration="86000" />
     </task>
     <servers />
   </component>

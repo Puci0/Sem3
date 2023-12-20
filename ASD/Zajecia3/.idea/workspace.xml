@@ -10,13 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2043faa-49dd-4911-9f4d-b58cdb234816" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Zajecia2/1d.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/1d.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Zajecia2/3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/3.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Zajecia2/In0201.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/In0201.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Zajecia2/In0203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/In0203.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Zajecia2/Out0201.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/Out0201.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Zajecia2/Out0203.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/Out0203.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Dane/chuj.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zajecia2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zajecia2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +94,7 @@
       <workItem from="1701119728838" duration="1399000" />
       <workItem from="1701947089804" duration="386000" />
       <workItem from="1702553878759" duration="596000" />
+      <workItem from="1702940405237" duration="152000" />
     </task>
     <servers />
   </component>
