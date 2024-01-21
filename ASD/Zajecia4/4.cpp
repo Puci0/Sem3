@@ -203,8 +203,8 @@ void Johnson(int** macierz, int** macierz2, int liczba_wierzcholkow,vector<vecto
 
 
 int main() {
-    ifstream plik("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia4\\input.txt");
-    ofstream output("C:\\Users\\user\\Desktop\\Sem3\\ASD\\Zajecia4\\output.txt");
+    ifstream plik("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia4\\input.txt");
+    ofstream output("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia4\\output.txt");
     string linia;
     getline(plik,linia);
     istringstream line(linia);

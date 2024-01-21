@@ -3,7 +3,9 @@
 #include <vector>
 using namespace std;
 
+int licznik=0;
 int fib(int n) {
+    licznik++;
     static vector<int> table;
     if (n <= 1) {
         return n;
@@ -30,4 +32,5 @@ int main()
         output << fib(i) << " ";
         i++;
     }
+    cout << licznik;
 }

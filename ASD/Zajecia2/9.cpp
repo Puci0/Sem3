@@ -5,7 +5,7 @@ using namespace std;
 int sr;
 bool wyszukiwanie_binarne(int l,int p, int szukana_liczba, int tab[])
 {
-    while(l<=p)
+    if(l<=p)
     {
         sr = (l+p)/2;
         if (tab[sr] == szukana_liczba) return true;

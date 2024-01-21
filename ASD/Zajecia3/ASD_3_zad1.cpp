@@ -51,12 +51,12 @@ string TAB_NWP(string s1, string s2) {
     if (subcode.length() >= 6) {
         return subcode;
     }
-    else return 0;
+    else return " ";
 }
 
 int main() {
-    ifstream input("In0301.txt");
-    ofstream output("Out0301.txt");
+    ifstream input("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia3\\In0301.txt");
+    ofstream output("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia3\\Out0301.txt");
     string linia;
     getline(input,linia);
     istringstream line(linia);

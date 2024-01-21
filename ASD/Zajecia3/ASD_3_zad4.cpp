@@ -2,125 +2,122 @@
 #include <vector>
 #include <sstream>
 #include <fstream>
-#include <string>
 #include <algorithm>
+
 using namespace std;
 
-struct Krawedz{
+struct Krawedz {
     int zrodlowy_wierzcholek;
     int docelowy_wierzcholek;
     int waga;
+
+    Krawedz(int zrodlowy, int docelowy, int w) : zrodlowy_wierzcholek(zrodlowy), docelowy_wierzcholek(docelowy), waga(w) {}
 };
 
-void dodajKrawedz(vector<vector<Krawedz>>& lista,int zrodlowy_wierzcholek,int docelowy_wierzcholek,int waga)
-{
-    Krawedz krawedz1;
-    krawedz1.docelowy_wierzcholek = docelowy_wierzcholek;
-    krawedz1.waga = waga;
+void dodajKrawedz(vector<vector<Krawedz>>& lista, int zrodlowy_wierzcholek, int docelowy_wierzcholek, int waga) {
+    Krawedz krawedz1(zrodlowy_wierzcholek, docelowy_wierzcholek, waga);
     lista[zrodlowy_wierzcholek - 1].push_back(krawedz1);
-
 }
 
-void wyswietlListe(const vector<vector<Krawedz>>& lista)
-{
-    int liczbaWierzcholkow = lista.size();
-    for(int i=0;i<liczbaWierzcholkow;i++)
-    {
-        cout << i + 1 << ": ";
-        for(const Krawedz& krawedz: lista[i])
-        {
-            cout << krawedz.docelowy_wierzcholek << " " << krawedz.waga << " ";
-        }
-        cout << endl;
+void heapify(vector<Krawedz>& arr, int n, int i) {
+    int largest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+
+    if (left < n && arr[left].waga > arr[largest].waga) {
+        largest = left;
+    }
+
+    if (right < n && arr[right].waga > arr[largest].waga) {
+        largest = right;
+    }
+
+    if (largest != i) {
+        swap(arr[i], arr[largest]);
+        heapify(arr, n, largest);
     }
 }
 
-ofstream output("Out0304.txt");
+void heap_sort(vector<Krawedz>& arr) {
+    int n = arr.size();
 
-void JarnikPrim(const vector<vector<Krawedz>>& lista, int ilosc_wierzcholkow) {
-    vector<bool> odwiedzone(ilosc_wierzcholkow, false); // Odwiedzone wierzchołki
-    vector<Krawedz> MDR; // Minimalne Drzewo Rozpinające
+    // Budujemy kopiec (heap)
+    for (int i = n / 2 - 1; i >= 0; i--) {
+        heapify(arr, n, i);
+    }
 
-    vector<pair<int, pair<int, int>>> Q; // Kolejka krawędzi z wagami (waga, (u, v)))
-    // Tworzenie sekwencji wszystkich krawędzi grafu wraz z ich wagami
+    // Wydobywamy elementy z kopca
+    for (int i = n - 1; i > 0; i--) {
+        swap(arr[0], arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+void JarnikPrim(const std::vector<vector<Krawedz>>& lista, int ilosc_wierzcholkow) {
+    vector<Krawedz> Q;
+    vector<int> MDR_Wierzcholki;
+    vector<Krawedz> MDR_Krawedzie;
+    int sumaWag = 0;
+
+    // Tworzymy sekwencję wszystkich krawędzi grafu
     for (int u = 0; u < ilosc_wierzcholkow; ++u) {
         for (const Krawedz& krawedz : lista[u]) {
-            int v = krawedz.docelowy_wierzcholek - 1;
-            int waga = krawedz.waga;
-            Q.push_back({waga, {u, v}});
+            Q.push_back(krawedz);
         }
     }
 
-    // Sortowanie krawędzi względem ich wag
-    sort(Q.begin(), Q.end());
+    heap_sort(Q);
 
-    // Wybierz startowy wierzchołek (może być dowolny)
-    int startowyWierzcholek = 0;
-    odwiedzone[startowyWierzcholek] = true;
+    // Wybieramy startowy wierzchołek
+    int startowyWierzcholek = 1;
+    MDR_Wierzcholki.push_back(startowyWierzcholek);
 
-    // Pętla główna - budowanie MDR
+    // Generujemy MDR
     for (int i = 1; i < ilosc_wierzcholkow; ++i) {
-        for (const auto& krawedz : Q) {
-            int waga = krawedz.first;
-            int u = krawedz.second.first;
-            int v = krawedz.second.second;
+        for (const Krawedz& krawedz : Q) {
+            int u = krawedz.zrodlowy_wierzcholek;
+            int v = krawedz.docelowy_wierzcholek;
 
-            if (odwiedzone[u] && !odwiedzone[v]) {
-                MDR.push_back({u + 1, v + 1, waga}); // Dodaj krawędź do MDR
-                odwiedzone[v] = true; // Oznacz wierzchołek jako odwiedzony
+            // Sprawdzamy warunki
+            bool u_in_W = find(MDR_Wierzcholki.begin(), MDR_Wierzcholki.end(), u) != MDR_Wierzcholki.end();
+            bool v_not_in_W = find(MDR_Wierzcholki.begin(), MDR_Wierzcholki.end(), v) == MDR_Wierzcholki.end();
+
+            if (u_in_W && v_not_in_W) {
+                // Dodajemy krawędź do MDR, aktualizujemy zbiór wierzchołków i sumujemy wagi
+                MDR_Krawedzie.push_back(krawedz);
+                MDR_Wierzcholki.push_back(v);
+                sumaWag += krawedz.waga;
                 break;
             }
         }
     }
-    int ilosc_wag = 0;
-    for (const auto& krawedz : MDR) {
-        output << krawedz.zrodlowy_wierzcholek << " " << krawedz.docelowy_wierzcholek << " [" << krawedz.waga << "], ";
-        ilosc_wag += krawedz.waga;
-    }
-    output << endl << ilosc_wag;
-}
 
-<<<<<<< HEAD
-int main()
-{
-=======
+    // Wyświetlamy krawędzie w MDR
+    ofstream output("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia3\\Out0304.txt");
+    for (const Krawedz& krawedz : MDR_Krawedzie) {
+        output << krawedz.zrodlowy_wierzcholek << " " << krawedz.docelowy_wierzcholek << " [" << krawedz.waga << "], ";
+    }
+    output << endl << sumaWag;
+}
 int main() {
->>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
-    ifstream input("In0304.txt");
+    ifstream input("C:\\Users\\User\\Desktop\\Sem3\\ASD\\Zajecia3\\In0304.txt");
     int ilosc_wierzcholkow;
     input >> ilosc_wierzcholkow;
     vector<vector<Krawedz>> lista(ilosc_wierzcholkow);
     string linia;
     input.ignore();
-<<<<<<< HEAD
-    for(int i=1; i<=ilosc_wierzcholkow;i++)
-    {
-        if(getline(input, linia))
-        {
-            int ilosc_liczb_w_linii = 0;
-            istringstream stream(linia);
-            int liczba;
-            while(stream >> liczba)
-            {
-=======
     for (int i = 1; i <= ilosc_wierzcholkow; i++) {
         if (getline(input, linia)) {
             int ilosc_liczb_w_linii = 0;
             istringstream stream(linia);
             int liczba;
             while (stream >> liczba) {
->>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
                 ilosc_liczb_w_linii++;
             }
 
             stream.clear();
             stream.seekg(0, ios::beg);
-<<<<<<< HEAD
-            for(int j=0;j<ilosc_liczb_w_linii;j+=2)
-            {
-=======
             for (int j = 0; j < ilosc_liczb_w_linii; j += 2) {
->>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
                 int zrodlowy_wierzcholek = i;
                 int docelowy_wierzcholek, waga;
 
@@ -131,11 +128,8 @@ int main() {
             }
         }
     }
-//    wyswietlListe(lista);
-//    cout << endl;
-<<<<<<< HEAD
-    JarnikPrim(lista,ilosc_wierzcholkow);
-=======
+
     JarnikPrim(lista, ilosc_wierzcholkow);
->>>>>>> 150d0b93b2b548c03438f3be0cd6907d7514e49f
+
+    return 0;
 }
